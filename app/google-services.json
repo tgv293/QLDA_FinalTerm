@@ -1,21 +1,22 @@
 {
   "project_info": {
-    "project_number": "23490812431",
-    "project_id": "itemsgame-4722c",
-    "storage_bucket": "itemsgame-4722c.appspot.com"
+    "project_number": "882681669970",
+    "firebase_url": "https://my-application-31d9a-default-rtdb.firebaseio.com",
+    "project_id": "my-application-31d9a",
+    "storage_bucket": "my-application-31d9a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:23490812431:android:6b5e587823aff2c423a17a",
+        "mobilesdk_app_id": "1:882681669970:android:5b70983dc118f00c59f28b",
         "android_client_info": {
-          "package_name": "com.ndthang.listitem"
+          "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDhlmM-DcPC2hsgt1KEfKUKhjMth7i6G-g"
+          "current_key": "AIzaSyDf2aLyAE81fMlMKr9EBQBhy_xCuUFooKo"
         }
       ],
       "services": {
