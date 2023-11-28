@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "23490812431",
+    "project_id": "itemsgame-4722c",
+    "storage_bucket": "itemsgame-4722c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23490812431:android:6b5e587823aff2c423a17a",
+        "android_client_info": {
+          "package_name": "com.ndthang.listitem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhlmM-DcPC2hsgt1KEfKUKhjMth7i6G-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
