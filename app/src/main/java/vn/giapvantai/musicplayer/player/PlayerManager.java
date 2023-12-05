@@ -1,14 +1,28 @@
 package vn.giapvantai.musicplayer.player;
 
+import static vn.giapvantai.musicplayer.MPConstants.AUDIO_FOCUSED;
+import static vn.giapvantai.musicplayer.MPConstants.AUDIO_NO_FOCUS_CAN_DUCK;
+import static vn.giapvantai.musicplayer.MPConstants.AUDIO_NO_FOCUS_NO_DUCK;
+import static vn.giapvantai.musicplayer.MPConstants.NEXT_ACTION;
+import static vn.giapvantai.musicplayer.MPConstants.NOTIFICATION_ID;
+import static vn.giapvantai.musicplayer.MPConstants.PLAY_PAUSE_ACTION;
+import static vn.giapvantai.musicplayer.MPConstants.PREV_ACTION;
+import static vn.giapvantai.musicplayer.MPConstants.VOLUME_DUCK;
+import static vn.giapvantai.musicplayer.MPConstants.VOLUME_NORMAL;
+
+import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ServiceInfo;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
 import android.os.PowerManager;
 import android.support.v4.media.session.PlaybackStateCompat;
 
@@ -365,7 +379,8 @@ public class PlayerManager implements MediaPlayer.OnBufferingUpdateListener, Med
         tryToGetAudioFocus();
         Music currentMusic = playerQueue.getCurrentMusic();
         if (currentMusic != null) {
-            Uri trackUri = Uri.parse(currentMusic.path);  // Assuming path is a valid Uri
+            Uri trackUri = ContentUris.withAppendedId(
+                    android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, currentMusic.id);
 
             try {
                 mediaPlayer.setDataSource(context, trackUri);
@@ -453,7 +468,7 @@ public class PlayerManager implements MediaPlayer.OnBufferingUpdateListener, Med
                 int percent = mediaPlayer.getCurrentPosition() * 100 / mediaPlayer.getDuration();
                 progressPercent.postValue(percent);
             }
-            // Lên lịch thực hiện tiếp theo sau một khoảng thời gian trễ
+        // Lên lịch thực hiện tiếp theo sau một khoảng thời gian trễ
             handler.postDelayed(this, 100);
         }
 
