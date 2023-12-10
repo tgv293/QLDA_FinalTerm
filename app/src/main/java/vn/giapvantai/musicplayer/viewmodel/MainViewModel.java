@@ -150,4 +150,43 @@ public class MainViewModel extends ViewModel {
     }
 }
 
+/**
+ * Comparator cho việc sắp xếp Album theo tiêu đề.
+ */
+class AlbumComparator implements Comparator<Album> {
+    @Override
+    public int compare(Album a1, Album a2) {
+        return a1.title.compareTo(a2.title);
+    }
+}
+
+/**
+ * Comparator cho việc sắp xếp Music theo số thứ tự.
+ */
+class SongComparator implements Comparator<Music> {
+    @Override
+    public int compare(Music m1, Music m2) {
+        return Long.compare(m1.track, m2.track);
+    }
+}
+
+/**
+ * Comparator cho việc sắp xếp Artist theo tên.
+ */
+class ArtistComparator implements Comparator<Artist> {
+    @Override
+    public int compare(Artist a1, Artist a2) {
+        return a1.name.compareTo(a2.name);
+    }
+}
+
+/**
+ * Comparator cho việc sắp xếp Folder theo tên.
+ */
+class FolderComparator implements Comparator<Folder> {
+
+    @Override
+    public int compare(Folder f1, Folder f2) {
+        return f1.name.compareTo(f2.name);
+    }
 }
