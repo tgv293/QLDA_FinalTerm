@@ -7,5 +7,21 @@
     android:orientation="vertical"
     tools:context=".fragments.ArtistsFragment">
 
-    
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:collapseIcon="@drawable/ic_close"
+        app:menu="@menu/menu_artists"
+        app:navigationIcon="@drawable/ic_close"
+        app:title="Artists"
+        app:titleTextColor="?android:attr/textColorPrimary" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artist_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_toolbar"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
 </RelativeLayout>
