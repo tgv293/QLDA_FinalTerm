@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/speed_025x"
+        android:title="0.25x" />
+    <item
+        android:id="@+id/speed_05x"
+        android:title="0.5x" />
+    <item
+        android:id="@+id/speed_075x"
+        android:title="0.75x" />
+    <item
+        android:id="@+id/speed_normal"
+        android:title="Normal" />
+    <item
+        android:id="@+id/speed_125x"
+        android:title="1.25x" />
+    <item
+        android:id="@+id/speed_15x"
+        android:title="1.5x" />
+    <item
+        android:id="@+id/speed_175x"
+        android:title="1.75x" />
+    <item
+        android:id="@+id/speed_2x"
+        android:title="2.0x" />
+    <item
+        android:id="@+id/speed_225x"
+        android:title="2.25x" />
+    <item
+        android:id="@+id/speed_25x"
+        android:title="2.5x" />
+</menu>
